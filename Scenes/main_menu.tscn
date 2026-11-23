@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://y85ualteaclm"]
+
+[ext_resource type="Script" uid="uid://vr5plk66uvya" path="res://Scenes/main_menu.gd" id="1_28flt"]
+[ext_resource type="Texture2D" uid="uid://cghkwr41sbqv0" path="res://Assets/Gator.jpg" id="2_48xlc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cw5ln"]
+bg_color = Color(0.33288068, 0.3328807, 0.33288056, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+corner_detail = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.63)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_erv1k"]
+bg_color = Color(0.3515629, 0.35156292, 0.35156274, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 5
+shadow_offset = Vector2(0, 3.675)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_48xlc"]
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 5
+shadow_offset = Vector2(0, 3.68)
+
+[node name="MainMenu" type="Node2D" unique_id=155853208]
+script = ExtResource("1_28flt")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1770140648]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -328.0
+offset_right = 576.0
+offset_bottom = 328.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_48xlc")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2087228988]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -155.2735
+offset_top = -129.25
+offset_right = 155.2735
+offset_bottom = 129.25
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=106140881]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 34
+theme_override_styles/normal = SubResource("StyleBoxFlat_cw5ln")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_erv1k")
+theme_override_styles/hover = SubResource("StyleBoxFlat_48xlc")
+text = "Start game"
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1765586095]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 34
+theme_override_styles/normal = SubResource("StyleBoxFlat_cw5ln")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_erv1k")
+theme_override_styles/hover = SubResource("StyleBoxFlat_48xlc")
+text = "Options"
+
+[node name="Button3" type="Button" parent="VBoxContainer" unique_id=151613673]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 34
+theme_override_styles/normal = SubResource("StyleBoxFlat_cw5ln")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_erv1k")
+theme_override_styles/hover = SubResource("StyleBoxFlat_48xlc")
+text = "Exit"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=297294807]
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_exit_pressed"]

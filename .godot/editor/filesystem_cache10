@@ -1,0 +1,16 @@
+78098b89c88a74ebe8c20117b8754620
+::res://::1795460058
+icon.svg::CompressedTexture2D::770648178784108366::1795458624::1795458633::1::::<><><>0<>0<>2552f9b6966d50224f4ac27f36b3f590<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+::res://Assets/::1795459830
+Gator.jpg::CompressedTexture2D::5209072469788101323::1795454060::1795454061::1::::<><><>0<>0<>2078060ff3540904730058329fc1204a<>res://.godot/imported/Gator.jpg-6802715155cf8c299c7ca09e4c52af23.ctex::
+Graass.png::CompressedTexture2D::2263091956200933504::1795455679::1795455683::1::::<><><>0<>0<>50e65036ab0c9437810d9fa6a2063274<>res://.godot/imported/Graass.png-1301afa883d274554d572cc309860c20.ctex::
+player.png::CompressedTexture2D::557450564118063309::1791562561::1791562565::1::::<><><>0<>0<>a9fcd2c2ac995fff344938f128c06c5a<>res://.godot/imported/player.png-5fe826d179e8297c657fd07c30124f2f.ctex::
+Sunseet.png::CompressedTexture2D::4165472585562123946::1795456153::1795456159::1::::<><><>0<>0<>32e38aae24defa7efaa1c43f173c3fc0<>res://.godot/imported/Sunseet.png-99939d24b4c4c2d049ce00723155735a.ctex::
+::res://Phisch/::1795459830
+::res://Scenes/::1795459830
+game.tscn::PackedScene::3658270579870207585::1795456235::0::1::::<><><>0<>0<><>::uid://c0s67xehayepv::::res://Scenes/playah.tscn<>uid://b0l1yv8rmot3w::::res://Assets/Sunseet.png
+main_menu.gd::GDScript::1510909029564895092::1795454076::0::1::::<>Node2D<><>0<>0<><>::
+main_menu.tscn::PackedScene::1754513956719311338::1795454076::0::1::::<><><>0<>0<><>::uid://vr5plk66uvya::::res://Scenes/main_menu.gd<>uid://cghkwr41sbqv0::::res://Assets/Gator.jpg
+playah.tscn::PackedScene::6566661844626072131::1795458878::0::1::::<><><>0<>0<><>::uid://h7benr3mcdyb::::res://Assets/player.png<>uid://d3l2yji5qcmob::::res://Scripts/playah.gd
+::res://Scripts/::1795459830
+playah.gd::GDScript::9148940532550403165::1795455146::0::1::::<>CharacterBody2D<><>0<>0<><>::

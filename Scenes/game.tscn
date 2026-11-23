@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://bsedggmfwfy70"]
+
+[ext_resource type="PackedScene" uid="uid://c0s67xehayepv" path="res://Scenes/playah.tscn" id="1_ebmjs"]
+[ext_resource type="Texture2D" uid="uid://b0l1yv8rmot3w" path="res://Assets/Sunseet.png" id="1_qxrlw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cw5ln"]
+size = Vector2(1157, 79)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wrm1d"]
+load_path = "res://.godot/imported/Graass.png-1301afa883d274554d572cc309860c20.ctex"
+
+[node name="Game" type="Node2D" unique_id=1461646938]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1674651499]
+offset_left = -580.0
+offset_top = -323.0
+offset_right = 574.0
+offset_bottom = 146.0
+texture = ExtResource("1_qxrlw")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1541167118]
+position = Vector2(-1, 174)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1109159533]
+shape = SubResource("RectangleShape2D_cw5ln")
+debug_color = Color(0.60653484, 0.36515915, 1, 0.41960785)
+
+[node name="TextureRect" type="TextureRect" parent="StaticBody2D" unique_id=2135596439]
+offset_left = -580.0
+offset_top = -37.0
+offset_right = 861.515
+offset_bottom = 577.0
+scale = Vector2(0.8, 0.52)
+texture = SubResource("CompressedTexture2D_wrm1d")
+stretch_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Playah" parent="." unique_id=321945891 instance=ExtResource("1_ebmjs")]
+position = Vector2(-1, -72)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=175392452]

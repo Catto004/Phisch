@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://c0s67xehayepv"]
+
+[ext_resource type="Texture2D" uid="uid://h7benr3mcdyb" path="res://Assets/player.png" id="1_6irr4"]
+[ext_resource type="Script" uid="uid://d3l2yji5qcmob" path="res://Scripts/playah.gd" id="1_7riue"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jvxdg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_6irr4")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cw5ln"]
+size = Vector2(140, 127)
+
+[node name="Playah" type="CharacterBody2D" unique_id=321945891]
+script = ExtResource("1_7riue")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1907266372]
+sprite_frames = SubResource("SpriteFrames_jvxdg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1289496621]
+position = Vector2(-1, -0.5)
+shape = SubResource("RectangleShape2D_cw5ln")

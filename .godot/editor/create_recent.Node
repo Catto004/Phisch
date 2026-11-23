@@ -1,0 +1,10 @@
+TextureRect
+CollisionShape2D
+StaticBody2D
+Node2D
+Camera2D
+VBoxContainer
+Button
+TileMap
+AnimatedSprite2D
+CharacterBody2D
