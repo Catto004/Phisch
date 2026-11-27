@@ -3,6 +3,33 @@
 [ext_resource type="Texture2D" uid="uid://h7benr3mcdyb" path="res://Assets/player.png" id="1_6irr4"]
 [ext_resource type="Script" uid="uid://d3l2yji5qcmob" path="res://Scripts/playah.gd" id="1_7riue"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7riue"]
+bg_color = Color(0.33288068, 0.3328807, 0.33288056, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+corner_detail = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.63)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u70qk"]
+bg_color = Color(0.3515629, 0.35156292, 0.35156274, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 5
+shadow_offset = Vector2(0, 3.675)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7q58n"]
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 5
+shadow_offset = Vector2(0, 3.68)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_jvxdg"]
 animations = [{
 "frames": [{
@@ -15,14 +42,31 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cw5ln"]
-size = Vector2(140, 127)
+size = Vector2(144, 128)
 
 [node name="Playah" type="CharacterBody2D" unique_id=321945891]
 script = ExtResource("1_7riue")
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2041939042]
+
+[node name="Exit_Button" type="Button" parent="Camera2D" unique_id=147125261]
+offset_left = 464.0
+offset_top = -304.0
+offset_right = 557.0
+offset_bottom = -257.0
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 34
+theme_override_styles/normal = SubResource("StyleBoxFlat_7riue")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_u70qk")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7q58n")
+text = "Exit"
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1907266372]
+position = Vector2(0.25, -3.9339066e-06)
+scale = Vector2(0.99655175, 0.95522386)
 sprite_frames = SubResource("SpriteFrames_jvxdg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1289496621]
-position = Vector2(-1, -0.5)
 shape = SubResource("RectangleShape2D_cw5ln")
+
+[connection signal="pressed" from="Camera2D/Exit_Button" to="." method="_on_exit_button_pressed"]
